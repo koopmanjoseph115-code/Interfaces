@@ -27,5 +27,12 @@ public class BigRectLister {
         list.add(r9);
         list.add(r10);
 
+        for (Rectangle rectangle : list){
+            Filter filter = new BigRectangleFilter();
+            if (filter.accept(rectangle)){
+                System.out.println(rectangle.toString());
+            }
+        }
+
     }
 }
